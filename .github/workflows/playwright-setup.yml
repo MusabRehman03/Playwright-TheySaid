@@ -1,0 +1,13 @@
+name: Playwright Setup
+
+on:
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  scaffold-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Placeholder step
+        run: echo "Playwright workflow scaffold is ready. CI/CD steps can be added later."
