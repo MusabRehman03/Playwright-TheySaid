@@ -3,6 +3,8 @@ name: Playwright Setup
 on:
   workflow_dispatch:
 
+permissions: {}
+
 jobs:
   scaffold-check:
     runs-on: ubuntu-latest
