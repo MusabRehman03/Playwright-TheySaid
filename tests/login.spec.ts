@@ -1,9 +1,8 @@
 import { test, expect } from '@playwright/test';
+import { LoginPage } from '../pages/login.page';
 
 test('login', async ({ page }) => {
-    await page.goto('https://evo.dev.theysaid.io/login');
-    await page.getByRole('textbox', { name: 'Email' }).fill('rehmanmusab0302@gmail.com');
-    await page.getByRole('button', { name: 'Continue' }).click();
-    await page.getByRole('textbox', { name: 'Password' }).fill('MusabUrRehman@123');
-    await page.getByRole('button', { name: 'Sign in' }).click();
+    const loginPage = new LoginPage(page);
+    await loginPage.login();
+    await expect(page).toHaveURL(/.*\/projects/);
 });
